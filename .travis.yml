@@ -11,7 +11,7 @@ install:
   - sudo rabbitmqctl set_permissions -p /trip test "." "." ".*"
   - sudo service rabbitmq-server restart
 before_script:
-  - sudo gem install sneakers
-  - sudo gem install bundler
+  - gem install sneakers
+  - gem install bundler
   - bundler install
 script: rspec spec
